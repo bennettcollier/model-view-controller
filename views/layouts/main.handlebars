@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <title>Tech Blog</title>
+</head>
+
+<body>
+
+    <div class='navbar-fixed'>
+        <nav class='med-blue'>
+            <div class='nav-wrapper'>
+                {{#if dashBoard}}
+                <a href="/" id='blog-logo' class="brand-logo">Dashboard</a>
+                {{else}}
+                <a href="/" id='blog-logo' class="brand-logo">Tech Blog</a>
+                {{/if}}
+
+                <ul class='right'>
+                    <li><a href='/'>Home</a></li>
+                    {{#if loggedIn}}
+                    <li><a href='/dashboard'>Dashboard</a></li>
+                    <li><button id='logout' class='btn-no-style'>Logout</button></li>
+                    {{else}}
+                    <li><a href='/login'>Login / Signup</a></li>
+                    {{/if}}
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <main class='container'>
+        {{{ body }}}
+    </main>
+
+
+    {{#if loggedIn}}
+    <script src='/javascript/logout.js'></script>
+    {{/if}}
+</body>
+
+</html>

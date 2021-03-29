@@ -1,0 +1,10 @@
+<div class="card-title med-blue">
+    <a href='/post/{{id}}'><span class='title'>{{title}}</span></a> <span class='user'>
+        by {{user.username}} on {{format_date created_at}}</span>
+</div>
+<div class='card-content'>
+    <p>{{content}}</p>
+</div>
+<div class='card-action'>
+    <a href='/post/{{id}}'>{{comments.length}} {{format_plural 'comment' comments.length}}</a>
+</div>

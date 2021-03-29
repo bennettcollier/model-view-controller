@@ -1,0 +1,32 @@
+<div class='container'>
+    <a href='/dashboard' class='form-text'> &larr; Back to Dashboard</a>
+    <div class='container'>
+        <div class='card'>
+            <div class='card-title med-blue'>
+                <span>Edit Post</span>
+            </div>
+            <div class='card-content'>
+
+
+                <form class='edit-post-form'>
+                    <div>
+                        <label class='form-text' for='post-title'>Title</label>
+                        <input name='post-title' type='text' value='{{post.title}}' />
+                    </div>
+                    <div>
+                        <label class='form-text' for='post-content'>Content</label>
+                        <textarea name='post-content'>{{post.content}}</textarea>
+                    </div>
+                    <div class='buttons'>
+                        <button type='submit' class='btn med-blue edit-post-btn'>Update Post</button>
+                        <button type='button' id='delete-post-btn' class='btn deep-orange darken-4'>Delete Post</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src='/javascript/edit-post.js'></script>
+<script src="/javascript/delete-post.js"></script>
